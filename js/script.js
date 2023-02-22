@@ -15,5 +15,23 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 4- Il prezzo finale deve essere espresso con massimo due decimali.
 */
 
+let clientAge = parseInt(prompt('Quanti anni hai?'));
+let distance = parseInt(prompt('Quanti chilometri desideri percorrere?'));
+
+let price = distance * 0.21;
+let discountPrice20 = price - ((price * 20) / 100);
+let discountPrice40 = price - ((price * 40) / 100);
+
+
+if (clientAge < 18 ) {
+    document.writeln(`Il costo del tuo biglietto è di ${discountPrice20.toFixed(2)}€`); 
+} else if (clientAge > 65) {
+    document.writeln(`Il costo del tuo biglietto è di ${discountPrice40.toFixed(2)}€`);
+} else {
+    document.writeln(`Il costo del tuo biglietto è di ${price.toFixed(2)}€`);
+}
+
+
+
 
     
